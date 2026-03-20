@@ -1,0 +1,20 @@
+# No subir logs con rutas locales ni datos de ejecución
+pipeline-logs/*.log
+logs/
+*.log
+venv/
+.claude/
+# Carpeta duplicada / legacy (el proyecto dbt vive en Client/)
+jordan/
+
+# dbt usuario local (UUID de telemetría)
+**/.user.yml
+
+# Credenciales y bases locales
+*.duckdb
+*.duckdb.wal
+**/service-account*.json
+**/*credentials*.json
+
+# Respaldo del historial Git anterior (no subir)
+.git_backup_old/
